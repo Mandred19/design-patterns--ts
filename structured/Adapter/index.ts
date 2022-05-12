@@ -10,7 +10,7 @@ class Adaptee implements IAdaptee {
   }
 }
 
-class Adapter implements ITarget {
+class Adapter implements IAdapter {
   private readonly adaptee: IAdaptee;
 
   constructor(adaptee: IAdaptee) {
@@ -39,3 +39,5 @@ interface ITarget {
 interface IAdaptee {
   adapteeRequest: () => string;
 }
+
+interface IAdapter extends ITarget {}
